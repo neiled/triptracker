@@ -1,0 +1,117 @@
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: table;
+}
+
+h1
+{
+  font-size: 1.5em;
+  padding-bottom: 0.5em;
+}
+
+h2
+{
+  font-style: italic;
+  font-size: 1.2em;
+  padding-bottom: 0.5em;
+}
+
+#containers
+{
+  display: inline-block;
+}
+
+#header
+{
+  width: 100%;
+  margin: 0 auto;
+}
+
+#main
+{
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+#main_content 
+{
+  padding: 0em;
+  color: black;
+  font-family: "Arial Rounded MT Bold", Arial;
+  font-size: 1.2em;
+  width: 75%;
+  margin: 0 auto;
+  overflow:hidden;
+}
+
+fieldset
+{
+}
+
+fieldset ol li
+{
+  clear:both;
+}
+
+label {
+  display: block;
+  vertical-align:middle;
+}
+
+.required label {
+  font-weight: bold;
+}
+
+.tagline
+{
+  text-align: right;
+  margin-right: 15em;
+  padding: 0;
+  font-size: 50%;
+}
+
+#footer
+{
+  width: 100%;
+  height: 100px;
+  color: white;
+  font-family: "Verdana";
+  font-size: 0.75em;
+  text-align: center;
+}
+
+#footer p
+{
+  padding-top:5em;
+}
+
+#footer_content
+{
+  margin: 0 auto;
+  font-size: 0.75em;
+  width: 960px;
+}
+
+#copyright
+{
+  margin-top: 2.5em;
+  float: left;
+  display: inline; /* double margin bug */  
+}
+
+#links
+{
+  margin-top: 2.5em;
+  float: right;
+  display: inline; /* double margin bug */  
+}
+
+a:link, a:visited
+{
+  color: black;
+}
+
+

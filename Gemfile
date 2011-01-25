@@ -7,7 +7,7 @@ gem 'rails', '3.0.3'
 
 gem 'sqlite3'
 gem 'formtastic'
-gem 'geoplanet'
+gem 'geokit'
 gem 'rails3-jquery-autocomplete', :git => "git://github.com/neiled/rails3-jquery-autocomplete.git"
 gem 'chronic'
 gem 'uuidtools'
@@ -26,6 +26,7 @@ group :test, :development do
   gem 'database_cleaner'
   gem 'cucumber-rails'
   gem 'cucumber'
+  gem 'ZenTest'
   gem 'launchy'    # So you can do Then show me the page
   gem 'factory_girl_rails'
   gem 'rcov'

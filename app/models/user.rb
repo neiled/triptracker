@@ -6,4 +6,10 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
+
+  has_many :trips
+  has_many :locations, :through => :trips
+  accepts_nested_attributes_for :trips, :locations
+
+
 end

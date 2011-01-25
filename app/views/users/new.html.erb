@@ -1,0 +1,14 @@
+<h1>Trip Tracker</h1>
+
+<%= semantic_form_for @user do |form| %>
+  <%= form.inputs do %>
+    <%= form.input :email, :label => "What is your email?" %>
+   <%= form.semantic_fields_for @location do |location| %>
+     <%= location.input :name, :label => "Where are you starting?" %>
+  <% end %>
+
+ <% end %>
+  <%= form.buttons %>
+<% end %>
+
+
