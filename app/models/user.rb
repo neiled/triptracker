@@ -5,11 +5,11 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :location
 
   has_many :trips
   has_many :locations, :through => :trips
-  accepts_nested_attributes_for :trips, :locations
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :trips_attributes
+  accepts_nested_attributes_for :trips
 
   before_validation :set_password
 
@@ -18,8 +18,6 @@ class User < ActiveRecord::Base
       self.password = self.password_confirmation = random_password
     end
   end # set_password
-  
-
 
   private
 

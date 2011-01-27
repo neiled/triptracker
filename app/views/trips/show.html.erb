@@ -1,1 +1,7 @@
-This is the show view of the trip model
+<ul>
+<% @trip.locations.each do |l| %>
+  <li>
+  <%= l.name %>
+  </li>
+<% end %>
+</ul>

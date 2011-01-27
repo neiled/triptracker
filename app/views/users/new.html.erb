@@ -4,9 +4,10 @@
   <%= form.inputs do %>
     <%= form.input :email, :label => "What is your email?" %>
 
-   <%= form.semantic_fields_for @trip do |trip| %>
-     <%= trip.semantic_fields_for @location do |location| %>
+   <%= form.semantic_fields_for :trips do |trip| %>
+     <%= trip.semantic_fields_for :locations do |location| %>
        <%= location.input :name, :label => "Where are you starting?" %>
+       <%= location.input :arrival_date, :label => "When do you leave?", :as => :string %>
     <% end %>
   <% end %>
 

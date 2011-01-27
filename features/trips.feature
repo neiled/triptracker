@@ -9,6 +9,7 @@ Feature: Creating a new trip
     And I should see "What is your email?"
     When I fill in "What is your email?" with "test@example.com"
     And I fill in "Where are you starting?" with "London"
+    And I fill in "When do you leave?" with "02/02/2011"
     And I press "Create User"
     Then I should see "London"
     And I should have 1 trip
