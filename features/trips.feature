@@ -15,3 +15,15 @@ Feature: Creating a new trip
     And I should have 1 trip
     And I should have 1 location
     And I should have 1 user
+
+  Scenario: User should be able to add a new location
+    Given I am a logged in authenticated user
+    Then I should see "Where next?"
+    When I follow "Where next?"
+    And I fill in "Location name" with "Las Vegas"
+    And I fill in "When do you arrive?" with "03/02/2011"
+    And I press "Add"
+    Then I should see "Las Vegas"
+    And I should have 1 trip
+    #And I should have 2 locations
+    And I should have 1 user

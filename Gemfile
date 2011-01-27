@@ -30,4 +30,8 @@ group :test, :development do
   gem 'launchy'    # So you can do Then show me the page
   gem 'factory_girl_rails'
   gem 'rcov'
+  gem 'guard'
+  gem 'guard-cucumber'
+  gem 'rb-fsevent'
+  gem 'growl'
 end

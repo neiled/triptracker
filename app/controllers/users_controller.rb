@@ -48,7 +48,7 @@ class UsersController < ApplicationController
       if @user.save
         format.html { redirect_to(user_trips_path(@user), :notice => 'User was successfully created.') }
       else
-        format.html { render :action => "new" }
+        format.html { redirect_to new_user_path }
       end
     end
   end
