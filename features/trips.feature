@@ -25,5 +25,5 @@ Feature: Creating a new trip
     And I press "Add"
     Then I should see "Las Vegas"
     And I should have 1 trip
-    #And I should have 2 locations
+    And I should have 2 locations
     And I should have 1 user

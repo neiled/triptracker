@@ -25,7 +25,7 @@ class LocationsController < ApplicationController
   # GET /locations/new.xml
   def new
     @trip = Trip.find(params[:trip_id])
-    @location = Location.new
+    @location = @trip.locations.build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -42,14 +42,13 @@ class LocationsController < ApplicationController
   # POST /locations.xml
   def create
     @location = Location.new(params[:location])
+    @location.trip = current_user.trips.find(params[:trip_id])
 
     respond_to do |format|
       if @location.save
-        format.html { redirect_to(@location, :notice => 'Location was successfully created.') }
-        format.xml  { render :xml => @location, :status => :created, :location => @location }
+        format.html { redirect_to(@location.trip, :notice => 'Location was successfully created.') }
       else
         format.html { render :action => "new" }
-        format.xml  { render :xml => @location.errors, :status => :unprocessable_entity }
       end
     end
   end
