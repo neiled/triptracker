@@ -3,6 +3,9 @@
 <%= semantic_form_for @user do |form| %>
   <%= form.inputs do %>
     <%= form.input :email, :label => "What is your email?" %>
+    <%= form.input :password, :label => "Password?" %>
+    <%= form.input :password_confirmation, :label => "Password again?" %>
+
 
    <%= form.semantic_fields_for :trips do |trip| %>
      <%= trip.semantic_fields_for :locations do |location| %>
