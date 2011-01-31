@@ -1,7 +1,7 @@
 <%= semantic_form_for [@trip, @location] do |form| %>
   <%= form.inputs do %>
     <%= form.input :name, :label => "Location name" %>
-    <%= form.input :arrival_date, :label => "When do you arrive?", :as => :text %>
+    <%= form.input :arrival_date, :label => "When do you arrive?", :as => :string %>
   <% end %>
   <%= form.commit_button "Add"%>
 <% end %>
