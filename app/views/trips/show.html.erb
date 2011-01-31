@@ -1,7 +1,7 @@
 <ul>
 <% @trip.locations.each do |l| %>
   <li>
-  <%= l.name %>
+  <%= l.arrival_date l.name %>
   </li>
 <% end %>
 </ul>
