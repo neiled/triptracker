@@ -1,7 +1,9 @@
 <ul>
 <% @trip.locations.each do |l| %>
   <li>
-  <%= l.arrival_date l.name %>
+  <%= l.arrival_date %>
+  <%= l.name %>
+  <%= "(" + l.transports.map{|t| t.name}.join(", ") + ")" unless l.transports.count == 0%>
   </li>
 <% end %>
 </ul>
