@@ -2,6 +2,9 @@ Feature: Creating a new trip
   As a new user to the site
   In order to track my trip and show friends
   I should be able to create a new trip
+
+  Background:
+    Given a transport exists called "Car"
   
   Scenario: New user should see ability to create first trip
     Given I am on the homepage
@@ -24,11 +27,11 @@ Feature: Creating a new trip
     When I follow "Where next?"
     And I fill in "Location name" with "Las Vegas"
     And I fill in "When do you arrive?" with "03/02/2011"
-    And I check " Car"
+    And I check "Car"
     And I press "Add"
     Then I should see "Las Vegas"
     And I should see "Car"
-    And I should see "2011-02-03"
+    And I should see "2011-03-02"
     And I should have 1 trip
     And I should have 2 locations
     And I should have 1 user

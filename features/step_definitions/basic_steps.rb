@@ -10,3 +10,7 @@ Then /^I should have (\d+) user$/ do |arg1|
   assert_equal arg1.to_i, User.count
 end
 
+Given /^a transport exists called "([^"]*)"$/ do |arg1|
+  Transport.create(:name => arg1)
+end
+
