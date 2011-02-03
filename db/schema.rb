@@ -10,17 +10,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110201201012) do
+ActiveRecord::Schema.define(:version => 20110203211000) do
 
   create_table "locations", :force => true do |t|
     t.string   "name"
-    t.decimal  "latitude"
-    t.decimal  "longitude"
     t.date     "arrival_date"
     t.date     "departure_date"
     t.integer  "trip_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.decimal  "lat"
+    t.decimal  "long"
+    t.integer  "position"
+    t.decimal  "distance"
   end
 
   create_table "locations_transports", :id => false, :force => true do |t|

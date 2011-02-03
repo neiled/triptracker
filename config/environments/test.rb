@@ -32,4 +32,6 @@ Triptracker::Application.configure do
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
+
+  Geokit::Geocoders::google = 'ABQIAAAARqO0mtjo3Ok5BLhk4lJJwRRL__4pF4UEOXy-I0A0g53RiHbqiBR1DbEzIECyFblup72Y47Zn57nraQ'
 end
