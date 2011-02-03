@@ -4,6 +4,7 @@
   <%= l.arrival_date %>
   <%= l.name %>
   <%= "(" + l.transports.map{|t| t.name}.join(", ") + ")" unless l.transports.count == 0%>
+  <%= l.distance.to_s + " miles" if l.distance %>
   </li>
 <% end %>
 </ul>

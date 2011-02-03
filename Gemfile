@@ -14,6 +14,7 @@ gem 'uuidtools'
 gem 'hoptoad_notifier'
 gem 'heroku'
 gem 'devise'
+gem 'acts_as_list'
 
 group :test, :development do
   gem "shoulda"
