@@ -1,12 +1,28 @@
-<ul>
-<% @trip.locations.each do |l| %>
-  <li>
-  <%= l.arrival_date %>
-  <%= l.name %>
-  <%= "(" + l.transports.map{|t| t.name}.join(", ") + ")" unless l.transports.count == 0%>
-  <%= l.distance.to_s + " miles" if l.distance %>
-  </li>
-<% end %>
-</ul>
+<div id="location_wrapper" class="clearfix">
+  <% @trip.locations.each do |l| %>
+    <div class="location clearfix">
+      <div class="location_date">
+        <%= l.arrival_date.to_formatted_s(:long_ordinal) %>
+      </div>
+      <div class="location_details">
+        <div class="location_name">
+          <%= l.name %>
+        </div>
+        <div class="location_transports">
+          <% l.transports.each do |t| %>
+            <img src="/images/<%=t.name%>.png"/>
+          <% end %>
+        </div>
+        <div class="location_distance">
+          <%= number_with_delimiter(l.distance.to_i) + " miles" if l.distance %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  <div class = "location clearfix">
+    <div id="where_next">
+      <%= link_to "Where next?", new_trip_location_path(@trip) %>
+    </div>
+  </div>
+</div>
 
-<%= link_to "Where next?", new_trip_location_path(@trip) %>

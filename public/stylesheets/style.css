@@ -47,6 +47,49 @@ h2
   overflow:hidden;
 }
 
+.location
+{
+  margin-bottom:1em;
+  width: 450px;
+}
+
+.location .location_date
+{
+  float: left;
+}
+
+.location .location_name
+{
+  width: 200px;
+}
+
+.location .location_transports
+{
+  text-align: right;
+}
+
+.location .location_distance
+{
+  text-align: right;
+}
+
+.location .location_details
+{
+  float: right;
+  background-image: url(/images/down_arrow.png);
+  background-repeat:no-repeat;
+  background-position: 25% 100%;
+  min-height: 100px;
+
+}
+
+#where_next
+{
+  text-align: right;
+  margin-right: 100px;
+}
+
+
 fieldset
 {
 }
@@ -114,4 +157,24 @@ a:link, a:visited
   color: black;
 }
 
+/* float clearing for IE6 */
+* html .clearfix{
+  height: 1%;
+  overflow: visible;
+}
+
+/* float clearing for IE7 */
+*+html .clearfix{
+  min-height: 1%;
+}
+
+/* float clearing for everyone else */
+.clearfix:after{
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  font-size: 0;
+}
 

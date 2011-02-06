@@ -8,13 +8,12 @@ gem 'rails', '3.0.3'
 gem 'sqlite3'
 gem 'formtastic'
 gem 'geokit'
-gem 'rails3-jquery-autocomplete', :git => "git://github.com/neiled/rails3-jquery-autocomplete.git"
 gem 'chronic'
 gem 'uuidtools'
-gem 'hoptoad_notifier'
 gem 'heroku'
 gem 'devise'
 gem 'acts_as_list'
+gem 'jquery-rails'
 
 group :test, :development do
   gem "shoulda"
