@@ -14,3 +14,10 @@ Given /^a transport exists called "([^"]*)"$/ do |arg1|
   Transport.create(:name => arg1)
 end
 
+
+
+Then /^I should see the car icon$/ do
+ page.has_xpath?("//img[@src='/images/Car.png']")
+end
+
+

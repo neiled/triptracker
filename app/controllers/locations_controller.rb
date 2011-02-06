@@ -1,4 +1,5 @@
 class LocationsController < ApplicationController
+  before_filter :authenticate_user!  
   # GET /locations
   # GET /locations.xml
   def index
@@ -76,7 +77,7 @@ class LocationsController < ApplicationController
     @location.destroy
 
     respond_to do |format|
-      format.html { redirect_to(locations_url) }
+      format.html { redirect_to(@location.trip) }
       format.xml  { head :ok }
     end
   end

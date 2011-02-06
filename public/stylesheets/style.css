@@ -1,3 +1,4 @@
+img {margin: 0;}
 body {
   padding: 0;
   margin: 0;
@@ -50,37 +51,51 @@ h2
 .location
 {
   margin-bottom:1em;
-  width: 450px;
+  width: 750px;
 }
 
 .location .location_date
 {
   float: left;
+  padding-top: 1em;
 }
 
 .location .location_name
 {
-  width: 200px;
+  float: left;
+  text-align: right;
+  font-size: 2em;
+  padding-top: 0.25em;
 }
 
 .location .location_transports
 {
-  text-align: right;
+  float: left;
 }
 
 .location .location_distance
 {
-  text-align: right;
+  float:left;
+  padding-top: 1em;
+  padding-right:1em;
+  padding-left: 1em;
 }
 
 .location .location_details
 {
   float: right;
-  background-image: url(/images/down_arrow.png);
+  /*background-image: url(/images/down_arrow.png);*/
   background-repeat:no-repeat;
-  background-position: 25% 100%;
+  background-position: 0% 100%;
   min-height: 100px;
+  width: 500px;
 
+}
+
+.delete
+{
+  font-size:0.4em;
+  
 }
 
 #where_next

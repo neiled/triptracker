@@ -30,8 +30,8 @@ Feature: Creating a new trip
     And I check "Car"
     And I press "Add"
     Then I should see "Las Vegas"
-    And I should see "Car"
-    And I should see "2011-03-02"
+    And I should see the car icon
+    And I should see "March 2nd, 2011"
     And I should have 1 trip
     And I should have 2 locations
     And I should have 1 user

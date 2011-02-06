@@ -5,18 +5,21 @@
         <%= l.arrival_date.to_formatted_s(:long_ordinal) %>
       </div>
       <div class="location_details">
-        <div class="location_name">
-          <%= l.name %>
-        </div>
         <div class="location_transports">
           <% l.transports.each do |t| %>
             <img src="/images/<%=t.name%>.png"/>
           <% end %>
         </div>
-        <div class="location_distance">
-          <%= number_with_delimiter(l.distance.to_i) + " miles" if l.distance %>
+        <% if l.transports.count > 0 %>
+          <div class="location_distance">
+            <%= number_with_delimiter(l.distance.to_i) + " miles to" if l.distance %>
+          </div>
+        <% end %>
+         <div class="location_name">
+          <%= l.name %>
+          <%= link_to image_tag("delete.png"), trip_location_path(@trip, l), :class=>"delete", :method => :delete unless l.position == 1 %>
         </div>
-      </div>
+     </div>
     </div>
   <% end %>
   <div class = "location clearfix">
